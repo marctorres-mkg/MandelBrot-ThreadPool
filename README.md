@@ -26,9 +26,9 @@ Mandelbrot-Project/
 - `mandelbrot` contains the two algorithms to process pixels, one using the `ThreadPool` class and the other one using a classic iterative approach.
 - `main` runs the two different methods and computes the duration of each one to compare the architectures.
 
-## Mathematical background
+## Mathematical Background
 
-Let $\mathbb{C}$ be the complex plane and ${z_n}_n \subseteq \mathbb{C}$ the complex sequence defined as
+Let $\mathbb{C}$ be the complex plane and $\{z_n\}_n \subseteq \mathbb{C}$ the complex sequence defined as
 $$
 z_{n+1} = z_n^2 + c
 $$
