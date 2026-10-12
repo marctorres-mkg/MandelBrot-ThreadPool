@@ -28,12 +28,12 @@ Mandelbrot-Project/
 
 ## Mathematical Background
 
-Let (\mathbb{C}) be the complex plane, and let ((z_n)_{n \geq 0}) be a sequence in (\mathbb{C}) defined by
+Let $`\mathbb{C}`$ be the complex plane, and let $`\{z_n\}_{n}`$ be a sequence in $`\mathbb{C}`$ defined by
 
-$$
+$$`
 z_{n+1} = z_n^2 + c
-$$
-where(z_0 = 0) and (c \in \mathbb{C}). The set of complex numbers (c) such that $\{z_n\}$ does not diverge is called the Mandelbrot set. It can be proved that if at some point, there exists a $z$ such that $|z| > 2$, then the sequence will diverge. Computationally, we can choose a number of iterations to define the _infinity_ (say `N = 1000`); if after those iterations the sequence does not escape, we paint it as black. If it does escape, we color it depending on the iteration number it broke the condition. Notice that we are using the condition `norm(z) < 16` instead of `4` to achieve a smooth image rendering. 
+`$$
+where $`z_0 = 0`$ and $`c \in \mathbb{C}`$. The set of complex numbers $`c`$ such that $`\{z_n\}`$ does not diverge is called the Mandelbrot set. It can be proved that if at some point, there exists a $z$ such that $`|z| > 2`$, then the sequence will diverge. Computationally, we can choose a number of iterations to define the _infinity_ (say `N = 1000`); if after those iterations the sequence does not escape, we paint it as black. If it does escape, we color it depending on the iteration number it broke the condition. Notice that we are using the condition `norm(z) < 16` instead of `4` to achieve a smooth image rendering. 
 
 The importance of the project relies on how we are rendering the colors of each pixel: thanks to the `ThreadPool` class, we can compute all the rows simultaneously instead of waiting for the previous row to complete the operations. This approach makes the algorithm highly efficient compared to the traditional method. 
 
