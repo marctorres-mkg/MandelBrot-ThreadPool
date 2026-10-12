@@ -3,6 +3,10 @@
 #include <complex>
 #include <fstream>
 
+#include <iomanip>
+#include <sstream>
+#include <ctime>
+
 #include "threadpool.h"
 
 using namespace std;
@@ -73,8 +77,16 @@ int main(void) {
             });
         }
     }
+    
+    auto t = std::time(nullptr);
+    auto tm = *std::localtime(&t);
 
-    writePPM("images/mandelbrot.ppm", width, height, pixels);
+    std::ostringstream oss;
+    oss << "images/mandelbrot_" << std::put_time(&tm, "%Y%m%d_%H%M%S") << ".ppm";
+
+    std::string filename = oss.str();
+
+    writePPM(filename, width, height, pixels);
 
     return 0;
 }
