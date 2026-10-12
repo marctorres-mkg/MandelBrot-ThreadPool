@@ -25,4 +25,3 @@ g++ src/main.cpp src/threadpool.cpp -o mandelbrot -O3 -pthread
 
 ```bash
 ./mandelbrot
-``
