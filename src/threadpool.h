@@ -9,10 +9,10 @@ using namespace std;
 
 class ThreadPool {
 private:
-    std::vector<std::thread> threads;
-    std::queue<std::function<void()>> tasks;
-    std::mutex mtx;
-    std::condition_variable cv;
+    vector<thread> threads;
+    queue<function<void()>> tasks;
+    mutex mtx;
+    condition_variable cv;
     bool done;
 
     void worker_thread(int id);
@@ -20,5 +20,5 @@ private:
 public:
     ThreadPool(size_t numThreads);
     ~ThreadPool();
-    void add_task(std::function<void()> task);
+    void add_task(function<void()> task);
 };
