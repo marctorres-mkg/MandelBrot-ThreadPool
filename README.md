@@ -13,7 +13,7 @@ Mandelbrot-Project/
 │
 ├── README.md
 ├── images/
-│    └── example.png
+│   └── example.png
 └── src/
     ├── main.cpp
     ├── mandelbrot.cpp
